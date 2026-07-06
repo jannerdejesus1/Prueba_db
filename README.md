@@ -78,9 +78,6 @@ top purchased product, inventory value per warehouse).
 **5. Extra points** (`extra/`): `07_views.sql` (2 views) and `08_stored_procedure.sql`
 (`riwi_get_supplier(p_supplier_id)` — returns one supplier, or all if `NULL`).
 
-> Note: the sample dataset covers only a few months with no opening balance, so some
-> computed stock/value figures may be negative in this demo run.
-
 ## Execution Evidence
 See `evidence/` for captured output of every script run against a live PostgreSQL 16
 instance.
