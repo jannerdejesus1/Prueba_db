@@ -109,18 +109,15 @@ Relationships:
 2. Run the scripts in order:
    ```bash
    psql -U postgres -f ddl/01_create_database.sql
-   psql -U postgres -d db_janner_delahoz_garabato -f ddl/02_create_tables.sql
+   psql -U postgres -d bd_Janner_delahoz_garabato -f ddl/02_create_tables.sql
    ```
-3. Replace `apellido` in the database name with the real last name before
-   running in the final delivery environment (format required:
-   `bd_firstname_lastname_clan`).
 
 ## Instructions to Load Data
 Cleaned, normalized CSV files are provided in `data/`. Two options:
 
 **Option A — psql client-side `\copy` (no server file-system access needed):**
 ```bash
-psql -U postgres -d db_janner_delahoz_garabato
+psql -U postgres -d bd_Janner_delahoz_garabato
 \copy riwi_city (city_id, city_name) FROM 'data/riwi_city.csv' DELIMITER ',' CSV HEADER;
 \copy riwi_category (category_id, category_name) FROM 'data/riwi_category.csv' DELIMITER ',' CSV HEADER;
 \copy riwi_supplier (supplier_id, supplier_name, city_id) FROM 'data/riwi_supplier.csv' DELIMITER ',' CSV HEADER;
@@ -180,5 +177,6 @@ PostgreSQL 16 instance (DDL creation, data load, DML operations, the 6
 queries, the 2 views and the stored function).
 
 ## Developer Information
-- **Full name:** Janner [Last name pending confirmation]
+- **Full name:** Janner de la Hoz
 - **Clan:** Garabato
+- **GitHub repository:** https://github.com/jannerdejesus1/Prueba_db.git
